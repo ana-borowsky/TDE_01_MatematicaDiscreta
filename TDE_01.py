@@ -28,18 +28,16 @@ def executaOperacao():
         case _: 
             print("Opção desconhecida.")
 
-numero_operacoes = 4
 operacao = "U" 
 conjuntoA = [3, 5, 67, 7]
 conjuntoB = [1, 2, 3, 4]
 
 with open('teste1.txt', 'r') as arquivo:
     linhas = arquivo.readlines()
-    primeira_linha = linhas[0]
-    print(primeira_linha)
+    numero_operacoes = int(linhas[0])
 
-'''for i in range(numero_operacoes):
-    executaOperacao()'''
+for i in range(numero_operacoes):
+    executaOperacao()
 
 '''arquivo = open("teste1.txt", "r")
 conteudo = arquivo.readlines()
