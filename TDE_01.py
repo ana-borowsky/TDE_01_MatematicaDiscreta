@@ -46,10 +46,3 @@ while i < numero_operacoes:
         operacao = linhas[j].strip()
         break
     i += 1
-
-
-'''arquivo = open("teste1.txt", "r")
-conteudo = arquivo.readlines()
-
-for linha in conteudo:
-    print(linha, end="")'''
