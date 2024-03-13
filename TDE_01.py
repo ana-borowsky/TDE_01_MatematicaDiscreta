@@ -25,17 +25,19 @@ C
 '''
 
 numero_operacoes = 4
-operacao = "I" 
+operacao = "U" 
 conjuntoA = [3, 5, 67, 7 ]
 conjuntoB = [1, 2, 3, 4]
 
 match (operacao):
     case "U":
         print("União do conjunto A e B")
-        resultado = conjuntoA + conjuntoB
-        print(set(sorted(resultado)))
+        resultado = set(conjuntoA) + set(conjuntoB)
+        print(sorted(resultado))
     case "I":
         print("Interseção do conjunto A e B")
+        resultado = set(conjuntoA) & set(conjuntoB)
+        print(sorted(resultado))
     case "C":
         print("Produto Cartesiano do conjunto A e B")
     case "D":
