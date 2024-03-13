@@ -23,27 +23,32 @@ C
 1, B, C, D, 1
 '''
 
+def executaOperacao():
+    match (operacao):
+        case "U":
+            print("União do conjunto A e B")
+            resultado = conjuntoA + conjuntoB
+            print(set(resultado))
+        case "I":
+            print("Interseção do conjunto A e B")
+            resultado = set(conjuntoA) & set(conjuntoB)
+            print(resultado)
+        case "C":
+            print("Produto Cartesiano do conjunto A e B")
+            resultado = [(a, b) for a in conjuntoA for b in conjuntoB]
+            print(resultado)
+        case "D":
+            print("Diferença do conjunto A e B")
+            resultado = set(conjuntoA) - set(conjuntoB)
+            print(resultado)
+        case _: 
+            print("Opção desconhecida.")
+
 numero_operacoes = 4
-operacao = "C" 
-conjuntoA = [3, 5, 67, 7 ]
+operacao = "U" 
+conjuntoA = [3, 5, 67, 7]
 conjuntoB = [1, 2, 3, 4]
 
-match (operacao):
-    case "U":
-        print("União do conjunto A e B")
-        resultado = conjuntoA + conjuntoB
-        print(set(resultado))
-    case "I":
-        print("Interseção do conjunto A e B")
-        resultado = set(conjuntoA) & set(conjuntoB)
-        print(resultado)
-    case "C":
-        print("Produto Cartesiano do conjunto A e B")
-        resultado = [(a, b) for a in conjuntoA for b in conjuntoB]
-        print(resultado)
-    case "D":
-        print("Diferença do conjunto A e B")
-        resultado = set(conjuntoA) - set(conjuntoB)
-        print(resultado)
-    case _: 
-        print("Opção desconhecida.")
+for i in range(numero_operacoes):
+    executaOperacao()
+
