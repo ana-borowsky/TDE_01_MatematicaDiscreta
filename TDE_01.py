@@ -28,7 +28,8 @@ def executaOperacao():
         case _: 
             print("Opção desconhecida.")
 
-j=1
+j = 1
+i = 0
 conjuntoA = [3, 5, 67, 7]
 conjuntoB = [1, 2, 3, 4]
 
@@ -37,11 +38,14 @@ with open('teste1.txt', 'r') as arquivo:
     numero_operacoes = int(linhas[0])
     operacao = linhas[j].strip()
 
-for i in range(numero_operacoes):
+while i < numero_operacoes:
     print(operacao)
     #executaOperacao()
-    j = j + 3
-    operacao = linhas[j].strip()
+    j += 3
+    while j < numero_operacoes * 3:
+        operacao = linhas[j].strip()
+        break
+    i += 1
 
 
 '''arquivo = open("teste1.txt", "r")
