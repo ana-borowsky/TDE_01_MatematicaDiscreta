@@ -24,7 +24,7 @@ C
 '''
 
 numero_operacoes = 4
-operacao = "I" 
+operacao = "C" 
 conjuntoA = [3, 5, 67, 7 ]
 conjuntoB = [1, 2, 3, 4]
 
@@ -39,6 +39,8 @@ match (operacao):
         print(resultado)
     case "C":
         print("Produto Cartesiano do conjunto A e B")
+        resultado = [(a, b) for a in conjuntoA for b in conjuntoB]
+        print(resultado)
     case "D":
         print("Diferença do conjunto A e B")
         resultado = set(conjuntoA) - set(conjuntoB)
