@@ -52,3 +52,9 @@ conjuntoB = [1, 2, 3, 4]
 for i in range(numero_operacoes):
     executaOperacao()
 
+arquivo = open("teste1.txt", "r")
+linhas = arquivo.readlines()
+
+for linha in linhas:
+    print(linha, end="")
+
