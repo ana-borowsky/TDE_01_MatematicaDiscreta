@@ -5,22 +5,6 @@ U = União
 I = Interseção
 D = Diferença
 C = Produto cartesiano
-
-Formato do arquivo .txt
-
-4 
-U 
-3, 5, 67, 7 
-1, 2, 3, 4  
-I 
-1, 2, 3, 4, 5 
-4, 5 
-D 
-1, A, C, 34 
-A, C, D, 23 
-C 
-3, 4, 5, 5, A, B, R 
-1, B, C, D, 1
 '''
 
 def executaOperacao():
@@ -49,12 +33,16 @@ operacao = "U"
 conjuntoA = [3, 5, 67, 7]
 conjuntoB = [1, 2, 3, 4]
 
-for i in range(numero_operacoes):
-    executaOperacao()
+with open('teste1.txt', 'r') as arquivo:
+    linhas = arquivo.readlines()
+    primeira_linha = linhas[0]
+    print(primeira_linha)
 
-arquivo = open("teste1.txt", "r")
-linhas = arquivo.readlines()
+'''for i in range(numero_operacoes):
+    executaOperacao()'''
 
-for linha in linhas:
-    print(linha, end="")
+'''arquivo = open("teste1.txt", "r")
+conteudo = arquivo.readlines()
 
+for linha in conteudo:
+    print(linha, end="")'''
