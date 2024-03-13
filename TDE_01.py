@@ -39,8 +39,7 @@ with open('teste1.txt', 'r') as arquivo:
     operacao = linhas[j].strip()
 
 while i < numero_operacoes:
-    print(operacao)
-    #executaOperacao()
+    executaOperacao()
     j += 3
     while j < numero_operacoes * 3:
         operacao = linhas[j].strip()
