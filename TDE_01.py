@@ -21,7 +21,6 @@ A, C, D, 23
 C 
 3, 4, 5, 5, A, B, R 
 1, B, C, D, 1
-
 '''
 
 numero_operacoes = 4
@@ -33,17 +32,16 @@ match (operacao):
     case "U":
         print("União do conjunto A e B")
         resultado = conjuntoA + conjuntoB
-        print(set(sorted(resultado)))
+        print(set(resultado))
     case "I":
         print("Interseção do conjunto A e B")
         resultado = set(conjuntoA) & set(conjuntoB)
-        print(sorted(resultado))
+        print(resultado)
     case "C":
         print("Produto Cartesiano do conjunto A e B")
     case "D":
         print("Diferença do conjunto A e B")
         resultado = set(conjuntoA) - set(conjuntoB)
-        print(sorted(resultado))
+        print(resultado)
     case _: 
-        print("Opção desconhecida.")
-
+        print("Opção desconhecida.")
