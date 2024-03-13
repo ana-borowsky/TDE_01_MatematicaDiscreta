@@ -33,7 +33,7 @@ match (operacao):
     case "U":
         print("União do conjunto A e B")
         resultado = conjuntoA + conjuntoB
-        print(resultado)
+        print(set(sorted(resultado)))
     case "I":
         print("Interseção do conjunto A e B")
     case "C":
