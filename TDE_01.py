@@ -1,30 +1,19 @@
-'''Alunos: Ana Paula Borowsky de Borba e Anthony Sutil de Oliveira
-
-Operações: 
-U = União
-I = Interseção
-D = Diferença
-C = Produto cartesiano
-'''
+#Alunos: Ana Paula Borowsky de Borba e Anthony Sutil de Oliveira
 
 def executaOperacao():
     match (operacao):
         case "U":
-            print("União do conjunto A e B")
             resultado = conjuntoA + conjuntoB
-            print(set(resultado))
+            print(f"União: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
         case "I":
-            print("Interseção do conjunto A e B")
             resultado = set(conjuntoA) & set(conjuntoB)
-            print(resultado)
+            print(f"Interseção: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {resultado}\n")
         case "C":
-            print("Produto Cartesiano do conjunto A e B")
             resultado = [(a, b) for a in conjuntoA for b in conjuntoB]
-            print(set(resultado))
+            print(f"Produto Cartesiano: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
         case "D":
-            print("Diferença do conjunto A e B")
             resultado = set(conjuntoA) - set(conjuntoB)
-            print(resultado)
+            print(f"Diferença: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
         case _: 
             print("Opção desconhecida.")
 
@@ -37,8 +26,8 @@ with open('teste1.txt', 'r') as arquivo:
     linhas = arquivo.readlines()
     numero_operacoes = int(linhas[0])
     operacao = linhas[j].strip()
-    conjuntoA = linhas[k].strip().split(',')
-    conjuntoB = linhas[l].strip().split(',')
+    conjuntoA = linhas[k].strip().replace(' ', '').split(',')
+    conjuntoB = linhas[l].strip().replace(' ', '').split(',')
 
 while i < numero_operacoes:
     executaOperacao()
@@ -47,7 +36,10 @@ while i < numero_operacoes:
     l += 3
     while j < numero_operacoes * 3:
         operacao = linhas[j].strip()
-        conjuntoA = linhas[k].strip().split(',')
-        conjuntoB = linhas[l].strip().split(',')
+        conjuntoA = linhas[k].strip().replace(' ', '').split(',')
+        conjuntoB = linhas[l].strip().replace(' ', '').split(',')
         break
     i += 1
+
+#colocar nome do arquivo em uma variavel
+# pegar letra maiuscula e minuscula na operação
