@@ -21,25 +21,32 @@ i = 0
 j = 1
 k = 2
 l = 3
+nome_arquivo = 'teste1.txt'
+qtd_linhas = 0
 
-with open('teste1.txt', 'r') as arquivo:
+with open(nome_arquivo, 'r') as arquivo:
     linhas = arquivo.readlines()
     numero_operacoes = int(linhas[0])
-    operacao = linhas[j].strip()
+    operacao = linhas[j].strip().upper()
     conjuntoA = linhas[k].strip().replace(' ', '').split(',')
     conjuntoB = linhas[l].strip().replace(' ', '').split(',')
+
+for m in linhas:
+    qtd_linhas += 1
 
 while i < numero_operacoes:
     executaOperacao()
     j += 3
     k += 3
     l += 3
-    while j < numero_operacoes * 3:
-        operacao = linhas[j].strip()
+
+    if j >= qtd_linhas:
+        print("Número de operações maior que a quantidade de operações. Por favor redefina a primeira linha do arquivo, ou adicione mais operações.")
+        break
+
+    while j < qtd_linhas:
+        operacao = linhas[j].strip().upper()
         conjuntoA = linhas[k].strip().replace(' ', '').split(',')
         conjuntoB = linhas[l].strip().replace(' ', '').split(',')
         break
     i += 1
-
-#colocar nome do arquivo em uma variavel
-# pegar letra maiuscula e minuscula na operação
