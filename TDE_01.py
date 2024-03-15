@@ -21,7 +21,7 @@ i = 0
 j = 1
 k = 2
 l = 3
-nome_arquivo = 'teste1.txt'
+nome_arquivo = input("Digite o nome do arquivo .txt (exemplo: teste1.txt): ")
 qtd_linhas = 0
 
 with open(nome_arquivo, 'r') as arquivo:
@@ -40,7 +40,7 @@ while i < numero_operacoes:
     k += 3
     l += 3
 
-    if j >= qtd_linhas:
+    if j >= qtd_linhas + 1:
         print("Número de operações maior que a quantidade de operações. Por favor redefina a primeira linha do arquivo, ou adicione mais operações.")
         break
 
