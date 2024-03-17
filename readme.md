@@ -15,8 +15,7 @@ operações de um arquivo '.txt', cujo formato é explicado abaixo.
         - C para produto cartesiano.<br>
     - A segunda são os elementos do conjunto 1, separados por vírgula;<br>
     - A terceira são os elementos do conjunto 2, separados por vírgula.<br>
- - Cada conjunto dessas três linhas será forma uma operação com dois conjuntos, e podem se repetir de forma ilimitada no
- decorrer do arquivo.<br><br>
+Cada conjunto dessas três linhas será forma uma operação com dois conjuntos, e podem se repetir de forma ilimitada no decorrer do arquivo.<br><br>
 
 Exemplo de arquivo:<br>
 
