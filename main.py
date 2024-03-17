@@ -68,6 +68,11 @@ def argumentosValidos(operacao, conjuntoA, conjuntoB):
     else:
         return True
 
+if len(sys.argv) != 2:
+    print("***IMPORTANTE*** LEIA***\nParece que você esqueceu de passar o argumento na linha de comando. \n Se estiver usando o repl.it, vá na aba SHELL ao invés da CONSOLE, que abre por padrão, e digite na linha de comando: python main.py ./teste1.txt")
+    print("Se estiver usando o VS code ou outra IDE, digite na linha de comando da mesma forma que para o repl.it.\nCaso esqueça de passar o argumento na linha de comando, você irá ver a seguinte mensagem de erro: IndexError: list index out of range\n")
+    sys.exit
+
 nome_arquivo = (sys.argv[1])
 
 with open(nome_arquivo, 'r') as arquivo:
