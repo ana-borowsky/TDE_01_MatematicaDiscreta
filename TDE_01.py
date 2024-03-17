@@ -21,7 +21,7 @@ i = 0
 j = 1
 k = 2
 l = 3
-nome_arquivo = input("Digite o nome do arquivo .txt (exemplo: teste1.txt): ")
+nome_arquivo = 'teste1.txt'
 qtd_linhas = 0
 
 with open(nome_arquivo, 'r') as arquivo:
