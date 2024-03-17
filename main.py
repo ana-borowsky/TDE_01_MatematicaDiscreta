@@ -1,5 +1,7 @@
 #Alunos: Ana Paula Borowsky de Borba e Anthony Sutil de Oliveira
 
+import sys
+
 def executaOperacao(operacao, conjuntoA, conjuntoB):
     match (operacao):
         case "U":
@@ -23,7 +25,7 @@ def argumentosValidos(operacao, conjuntoA, conjuntoB):
     else:
         return True
 
-nome_arquivo = 'teste1.txt'
+nome_arquivo = (sys.argv[1])
 
 with open(nome_arquivo, 'r') as arquivo:
     num_operacoes = int(arquivo.readline())

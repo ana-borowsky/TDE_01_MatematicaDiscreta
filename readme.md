@@ -35,8 +35,9 @@ C<br>
 
 ## Como adicionar o arquivo '.txt' para ser lido
 
-O nome do arquivo '.txt' encontra-se dentro de uma variável, chamada 'nome_arquivo'. Para mudar o arquivo a ser lido, basta trocar
-o nome do arquivo dentro desta variável.<br><br>
+O nome do arquivo texto a ser lido deverá ser passado como parâmetro na linha de comando.
+Na linha de comando, digite o comando para executar, adicione um espaço, e o caminho do arquivo texto.<br><br>
 
-Exemplo:<br>
-nome_arquivo = 'teste1.txt'
+Exemplo(linux):<br>
+
+python3 main.py ./teste1.txt
