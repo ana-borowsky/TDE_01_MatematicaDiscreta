@@ -17,6 +17,12 @@ def executaOperacao(operacao, conjuntoA, conjuntoB):
         case _: 
             print("Opção desconhecida.")
 
+def argumentosValidos(operacao, conjuntoA, conjuntoB):
+    if operacao[0] == '' or conjuntoA[0] == '' or conjuntoB[0] == '':
+        return False
+    else:
+        return True
+
 nome_arquivo = 'teste1.txt'
 
 with open(nome_arquivo, 'r') as arquivo:
@@ -25,4 +31,9 @@ with open(nome_arquivo, 'r') as arquivo:
         operacao = arquivo.readline().strip().upper()
         conjuntoA = arquivo.readline().strip().replace(' ', '').split(',')
         conjuntoB = arquivo.readline().strip().replace(' ', '').split(',')
-        executaOperacao(operacao, conjuntoA, conjuntoB)
+
+        if argumentosValidos(operacao, conjuntoA, conjuntoB):
+            executaOperacao(operacao, conjuntoA, conjuntoB)
+        else:
+            print("Erro de formatação do arquivo. Possíveis erros: número de operações maior do que a quantidade de operações presentes no arquivo; um dos conjuntos não existe para completar a operação. Por favor verifique os detalhes no readme.")
+            break
