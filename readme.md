@@ -8,13 +8,13 @@ operações de um arquivo '.txt', cujo formato é explicado abaixo.
 
 1 - Na primeira linha, escreva um número inteiro, que será referente à quantidade de operações a serem realizadas.<br>
 2 - O restante do arquivo consiste em um conjunto padrão de três linhas, sendo elas:<br>
-    - A primeira é uma letra, que define uma operação:<br>
-        - U para união, <br>
-        - I para interseção, <br>
-        - D para diferença, <br>
-        - C para produto cartesiano.<br>
-    - A segunda são os elementos do conjunto 1, separados por vírgula;<br>
-    - A terceira são os elementos do conjunto 2, separados por vírgula.<br>
+    2.1 - A primeira é uma letra, que define uma operação:<br>
+        2.1.1 - U para união,<br>
+        2.1.2 - I para interseção,<br>
+        2.1.3 - D para diferença, <br>
+        2.1.4 - C para produto cartesiano.<br>
+    2.2 - A segunda são os elementos do conjunto 1, separados por vírgula;<br>
+    2.3 - A terceira são os elementos do conjunto 2, separados por vírgula.<br>
 Cada conjunto dessas três linhas será forma uma operação com dois conjuntos, e pode se repetir de forma ilimitada no decorrer do arquivo.<br><br>
 
 Exemplo de arquivo:<br>
@@ -39,5 +39,9 @@ O nome do arquivo texto a ser lido deverá ser passado como parâmetro na linha 
 Na linha de comando, digite o comando para executar, adicione um espaço, e o caminho do arquivo texto.<br><br>
 
 Exemplo(linux):<br>
-
 python3 main.py ./teste1.txt
+
+Os nomes dos arquivos texto fornecidos neste trabalho são:<br>
+- teste1.txt<br>
+- teste2.txt<br>
+- teste3.txt<br>
