@@ -49,16 +49,16 @@ def executaOperacao(operacao, conjuntoA, conjuntoB):
     match (operacao):
         case "U":
             resultado = conjuntoA + conjuntoB
-            print(f"União: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
+            print("União: conjunto 1 " + str(set(conjuntoA)).replace("'","") + ", conjunto 2 " + str(set(conjuntoB)).replace("'","") + ". Resultado: " + str(set(resultado)).replace("'","") + "\n")
         case "I":
             resultado = set(conjuntoA) & set(conjuntoB)
-            print(f"Interseção: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
+            print("Interseção: conjunto 1 " + str(set(conjuntoA)).replace("'","") + ", conjunto 2 " + str(set(conjuntoB)).replace("'","") + ". Resultado: " + str(set(resultado)).replace("'","") + "\n")
         case "C":
             resultado = [(a, b) for a in conjuntoA for b in conjuntoB]
-            print(f"Produto Cartesiano: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
+            print("Produto Cartesiano: conjunto 1 " + str(set(conjuntoA)).replace("'","") + ", conjunto 2 " + str(set(conjuntoB)).replace("'","") + ". Resultado: " + str(set(resultado)).replace("'","") + "\n")
         case "D":
             resultado = set(conjuntoA) - set(conjuntoB)
-            print(f"Diferença: conjunto 1 {set(conjuntoA)}, conjunto 2 {set(conjuntoB)}. Resultado: {set(resultado)}\n")
+            print("Diferença: conjunto 1 " + str(set(conjuntoA)).replace("'","") + ", conjunto 2 " + str(set(conjuntoB)).replace("'","") + ". Resultado: " + str(set(resultado)).replace("'","") +"\n")
         case _: 
             print("Opção desconhecida.")
 
