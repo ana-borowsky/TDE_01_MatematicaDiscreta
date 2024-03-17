@@ -36,7 +36,7 @@ C<br>
 ## Como adicionar o arquivo '.txt' para ser lido
 
 O nome do arquivo '.txt' encontra-se dentro de uma variável, chamada 'nome_arquivo'. Para mudar o arquivo a ser lido, basta trocar
-o nome do arquivo dentro desta variável.
+o nome do arquivo dentro desta variável.<br><br>
 
-Exemplo:
+Exemplo:<br>
 nome_arquivo = 'teste1.txt'
