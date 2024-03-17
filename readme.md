@@ -6,19 +6,19 @@ operações de um arquivo '.txt', cujo formato é explicado abaixo.
 
 ## Criação dos dados a serem lidos.
 
-1 - Na primeira linha, escreva um número inteiro, que será referente à quantidade de operações a serem realizadas.
-2 - O restante do arquivo consiste em um conjunto padrão de três linhas, sendo elas:
-    - A primeira é uma letra, que define uma operação:
-        - U para união, 
-        - I para interseção, 
-        - D para diferença, 
-        - C para produto cartesiano.
-    - A segunda são os elementos do conjunto 1, separados por vírgula;
-    - A terceira são os elementos do conjunto 2, separados por vírgula.
+1 - Na primeira linha, escreva um número inteiro, que será referente à quantidade de operações a serem realizadas.<br>
+2 - O restante do arquivo consiste em um conjunto padrão de três linhas, sendo elas:<br>
+    - A primeira é uma letra, que define uma operação:<br>
+        - U para união, <br>
+        - I para interseção, <br>
+        - D para diferença, <br>
+        - C para produto cartesiano.<br>
+    - A segunda são os elementos do conjunto 1, separados por vírgula;<br>
+    - A terceira são os elementos do conjunto 2, separados por vírgula.<br>
  - Cada conjunto dessas três linhas será forma uma operação com dois conjuntos, e podem se repetir de forma ilimitada no
- decorrer do arquivo.
+ decorrer do arquivo.<br><br>
 
-Exemplo de arquivo:
+Exemplo de arquivo:<br>
 
 4<br>
 U<br>
